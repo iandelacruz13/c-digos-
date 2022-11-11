@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class JavaApplication1 {
+
+public static void main(String[] args) {
+
+ Scanner sc = new Scanner(System.in);
+
+ int a = (int) ((Math.random() * 20)+1); 
+ int b;
+ int i; 
+
+ System.out.println("adivina un numero del 1 al 20.");
+
+ System.out.print("Tienes 5 intentos. Escribe un número entre 1 y 20: ");
+ b = sc.nextInt();
+
+ for (i=0; i<=4; i++) { 
+    if (a == b) {  
+      System.out.println("lo lograste es el numero"); 
+      break;}
+    else if (i == 4) { 
+      System.out.println("no le diste a el numero: " + a);
+      break;}
+    else if (a > b) 
+      System.out.println("El numero es MAYOR" + b);
+    else if (a < b)
+      System.out.println("El número es MENOR" + b);
+    if (i <=1) { 
+     System.out.print("Otro intento: "); 
+     b = sc.nextInt(); } 
+    else if (i ==2) { 
+    int x = (int) (a/10);
+    System.out.println("Se nota que no sabes una pista, la primera cifra es " + x);
+    System.out.print("Inténtalo de nuevo: ");
+    b = sc.nextInt(); } 
+   else if (i >= 3) {
+   System.out.print("ya valiste ÚLTIMO intento: ");
+   b = sc.nextInt(); }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+import java.util.*;
+public class TablaMultiplicar {
+
+    public static void main(String[] args) {
+ 
+        Scanner sc = new Scanner(System.in);
+        int n;
+        int x;     
+        System.out.println("Introduce la tabla que desees: ");
+        System.out.println("introduce hasta que numero:");                                            
+        n = sc.nextInt();
+        x = sc.nextInt();
+        
+        System.out.println("Tabla del " + n);
+        
+        for(int i = 1; i<=x; i++){
+             System.out.println(n + " * " + i + " = " + n*i);                                                     
+        }
+    }
+}

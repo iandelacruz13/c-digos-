@@ -1,0 +1,260 @@
+	import java.util.Scanner;
+	public class hotel {
+		public static void main(String[] args) {
+			int eleva = 1;
+			int va;
+			int va1;
+			int va2=0;
+			int va3=0;
+			int va4=0;
+			int va5=0;
+			int va6=0;
+			int per=0;
+			int pi=0;
+			int z=0;
+			int x1 = 0;
+			Scanner scnr = new Scanner(System.in);
+			System.out.println("HOTEL LAS CARIÑOSAS");
+while(eleva == 1){
+				try{
+					System.out.println("Que desea?");
+					System.out.println("1.....Subir personas"); 
+					System.out.println("2.....Ver cuantas personas hay en cada piso");
+					System.out.println("3......Bajar personas de un piso");
+					System.out.println("4......Bajar pesonas de los pisos");
+			   	System.out.println("5.......Ver cuantas personas hay en el hotel y cuantas salieron");
+			   	System.out.println("Para cancelar operacion presione otra tecla");
+					va = scnr.nextInt();
+					if (va == 1) {
+						System.out.println("Subir personas al elevador");
+						System.out.println("Ingresa personas maximo 5");
+						per = scnr.nextInt();
+						if (per >= 1 && per<=5) {
+							System.out.println("Ingresa numero de pisos maximo 5");
+							pi = scnr.nextInt();
+							if (pi >=1 && pi<=5 ) {
+								if(pi==1){
+									va2= va2 + per;
+									System.out.println("Ya hay " + va2 + " Personas en piso 1");
+								}
+								if(pi==2){
+									va3 = va3 + per;
+									System.out.println("Ya hay " + va3 + " Personas en piso 2");
+								}
+								if(pi==3){
+									va4 = va4 + per;
+									System.out.println("Ya hay " + va4 + " Personas en piso 3");
+								}
+								if(pi==4){
+									va5 = va5 + per;
+									System.out.println("Ya hay " + va5 + " Personas en piso 4");
+								}
+								if(pi==5){
+									va6 = va6 + per;
+									System.out.println("Ya hay " + va6 + " Personas en piso 5");
+								}
+							}else{
+								System.out.println("Solo hay 5 pisos");
+							}
+						}else{
+							System.out.println("El elevador acepta de 1 a 5 personas");
+						}
+					}else{
+						if (va ==  2) {
+						
+							System.out.println("Personas en cada piso");
+							System.out.println("Piso 1: " + va2);
+							
+							System.out.println("Piso 2: " + va3);
+							
+							System.out.println("Piso 3: " + va4);
+							
+							System.out.println("Piso 4: " + va5);
+							
+							System.out.println("Piso 5: " + va6);
+						}else{
+							if (va == 3) {
+								System.out.println("Bajar personas de un piso");
+								System.out.println("Ingresa numero de pisos");
+								pi = scnr.nextInt();
+								if (pi >= 1 && pi<=5 ) {
+									System.out.println("Bajaremos a todos los del piso:  " + pi);
+						if(pi==1){
+							System.out.println("numero de personas en piso " + va2);
+							z = z + va2;
+							int aux = 1;
+							while(va2!=0){
+								if (va2 >= 5) {
+									va2 = va2 - 5;
+									System.out.println("Bajando: " + aux + " Sobran " + va2 + "  Quedan 5 en el elevador");
+									aux++;
+								}else{
+									System.out.println("Bajando: " + aux + " Hay  " + va2 + " En el elevador");
+									va2 = 0;
+									aux++;
+								}
+							}
+						}
+						if(pi==2){
+							System.out.println("numero de personas en el piso:  " + va3);
+							z = z + va3;
+							int aux = 1;
+							while(va3!=0){
+								if (va3 >= 5) {
+									va3 = va3 - 5;
+									System.out.println("Bajando: " + aux + " Quedan " + va3 + " Quedan 5 en el elevador");
+									aux++;
+								}else{
+									System.out.println("Bajando: " + aux + " Queda  " + va3 + " En el elevador");
+									va3 = 0;
+									aux++;
+								}
+							}
+						}
+						if(pi==3){
+							System.out.println("DE PERSONAS EN EL PISO:  " + va4);
+							z = z + va4;
+							int aux = 1;
+							while(va4!=0){
+								if (va4 >= 5) {
+									va4 = va4 - 5;
+									System.out.println("Bajando: " + aux + " Quedan " + va4 + " Quedan 5 en el elevador");
+									aux++;
+								}else{
+									System.out.println("Bajada: " + aux + " Van  " + va4 + " En el elevador");
+									va4 = 0;
+									aux++;
+								}
+							}		 				
+						}
+						if(pi==4){
+							System.out.println("DE PERSONAS EN EL PISO:  " + va5);
+							z = z + va5;
+							int aux = 1;
+							while(va5!=0){
+								if (va5 >= 5) {
+									va5 = va5 - 5;
+									System.out.println("Bajando: " + aux + " Quedan " + va5 + " Quedan 5 en el elevador");
+									aux++;
+								}else{
+									System.out.println("Bajando: " + aux + " Hay  " + va5 + " En el elevador");
+									va5 = 0;
+									aux++;
+								}
+							}
+
+						}
+						if(pi==5){
+							System.out.println("PERSONAS EN EL PISO:  " + va6);
+							int aux = 1;
+							z = z + va6;
+							while(va6!=0){
+								if (va6 >= 5) {
+									va6 = va6 - 5;
+									System.out.println("Bajando: " + aux + " Quedan " + va6 + " Quedan 5 en el elevador");
+									aux++;
+								}else{
+									System.out.println("Bajando: " + aux + " Van  " + va6 + " En el elevador");
+									va6 = 0;
+									aux++;
+								}
+							}
+						}
+					}else{
+						System.out.println("Solo hay 5 pisos");
+					}
+				}else{
+					if (va == 4) {
+						System.out.println("Vaciar pisos");
+						System.out.println("PISO 1");
+						z = z + va2;
+						int aux = 1;
+						while(va2!=0){
+							if (va2 >= 5) {
+								va2 = va2 - 5;
+								System.out.println("Bajando: " + aux + " Quedan " + va2 + " hay 5 en el elevador");
+								aux++;
+							}else{
+								System.out.println("Bajando: " + aux + " Van  " + va2 + " En el elevador");
+								va2 = 0;
+								aux++;
+							}
+						}
+						System.out.println("PISO 2");
+						z = z + va3;
+						aux = 1;
+						while(va3!=0){
+							if (va3 >= 5) {
+								va3 = va3 - 5;
+								System.out.println("Bajando: " + aux + " Quedan " + va3 + " Van 5 en el elevador");
+								aux++;
+							}else{
+								System.out.println("Bajando: " + aux + " Van  " + va3 + " En el elevador");
+								va3 = 0;
+								aux++;
+							}
+						}
+						System.out.println("PISO 3");
+						z = z + va4;
+						aux = 1;
+						while(va4!=0){
+							if (va4 >= 5) {
+								va4 = va4 - 5;
+								System.out.println("Bajando:" + aux + " Quedan " + va4 + " Van 5 en el elevador");
+								aux++;
+							}else{
+								System.out.println("Bajando: " + aux + " Van  " + va4 + " En el elevador");
+								va4 = 0;
+								aux++;
+							}
+						}
+						System.out.println("PISO 4");
+						z = z + va5;
+						aux = 1;
+						while(va5!=0){
+							if (va5 >= 5) {
+								va5 = va5 - 5;
+								System.out.println("Bajando: " + aux + " Quedan " + va5 + " Van 5 en el elevador");
+								aux++;
+							}else{
+								System.out.println("Bajando: " + aux + " Van  " + va5 + " En el elevador");
+								va5 = 0;
+								aux++;
+							}
+						}
+						System.out.println("PISO 5");
+						z = z + va6;
+						aux = 1;
+						while(va6!=0){
+							if (va6 >= 5) {
+								va6 = va6 - 5;
+								System.out.println("Bajando: " + aux + " Quedan " + va6 + " Van 5 en el elevador");
+								aux++;
+							}else{
+								System.out.println("Bajando: " + aux + " Van  " + va6 + " En el elevador");
+								va6 = 0;
+								aux++;
+							}
+						}
+					}else{
+						if (va == 5) {
+							System.out.println("Entradas y salidas");
+							x1 = va2 + va3 + va4 + va5 + va6;
+							System.out.println("Hay: " + x1 + " Personas");
+							System.out.println("Salieron: " + z + " Personas");
+						}else{
+							System.out.println("END");		 					
+							eleva = 2;
+						}
+					}
+				}
+			}
+		}
+	}
+	catch (Exception e) {
+		System.out.println("Solo numeros");
+		eleva = 2;
+	}
+		}
+		}
+	}

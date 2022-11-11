@@ -1,0 +1,63 @@
+package Ejemplo1;
+
+import java.util.Scanner;
+public class Juego {
+
+  public static void main(String[] args) {
+  System.out.println(" Ingresar el valor del dado ");
+  Scanner leer = new Scanner(System.in);
+  int max = leer.nextInt() ;
+  System.out.println("Ingresa numero de caballos");
+  int caballo = leer.nextInt();
+  System.out.println(" Ingrese la meta ");
+  int meta = leer.nextInt();
+   int caballo1 = 0 ;
+		int caballo2 = 0 ;   
+		int caballo3 = 0 ;
+		int caballo4 = 0 ; 
+		System.out.println(".....inica el juego..... "); 
+		System.out.println("caballo1 " + caballo1);
+		System.out.println("caballo2 "+ caballo2);
+		System.out.println("caballo3 " +caballo3);
+		System.out.println("caballo4 " +caballo4);
+		int contador = 0;
+		while(caballo1<meta){
+		 int dado = (int)(Math.random()*max+1) ; 
+		 caballo1=caballo1+dado;
+		 
+		 System.out.println("Avanzaste");
+		 System.out.println("caballo1  "+caballo1+"  Dado cayo  "+dado);
+	                             if(caballo1>=meta){
+	                               System.out.println(" Gano ");
+}
+		 if(caballo2<meta){
+		 int dado2 = (int)(Math.random()*max+1) ; 
+		 caballo2=caballo2+dado2;
+		 System.out.println("caballo2  "+caballo2+"  Dado cayo  "+dado2);
+		                        if(caballo2>=meta){
+	                               System.out.println(" Gano ");
+	                               }
+}
+if(caballo3<meta){
+		 int dado3 = (int)(Math.random()*max+1) ; 
+		 caballo3=caballo3+dado3;
+		 System.out.println("caballo3  "+caballo3+"  Dado cayo  "+dado3);
+		                 if(caballo3>=meta){
+	                               System.out.println(" Gano ");
+	                               }
+}
+if(caballo4<meta){
+		 int dado4 = (int)(Math.random()*max+1) ; 
+		 caballo4=caballo4+dado4;
+		 System.out.println("caballo4  "+caballo4+"  Dado cayo  "+dado4);
+		                    if(caballo4>=meta){
+	                               System.out.println(" Gano ");
+	                               }
+		 contador ++; 
+}
+}
+
+
+
+  }
+}
